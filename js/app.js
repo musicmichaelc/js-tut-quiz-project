@@ -17,8 +17,8 @@ form.addEventListener('submit', e => {
   });
 
   // Display result:
-  const result = document.querySelector('div.result');
-  const scoreDisplay = document.querySelector('span');
+  const result = document.querySelector('.result');
+  const scoreDisplay = result.querySelector('span');
 
   scoreDisplay.textContent = `${score}%`;
   result.classList.remove('d-none');
