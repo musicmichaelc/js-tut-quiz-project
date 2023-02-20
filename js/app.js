@@ -20,6 +20,7 @@ form.addEventListener('submit', e => {
   const result = document.querySelector('.result');
   const scoreDisplay = result.querySelector('span');
 
+  scrollTo(0, 0);
   scoreDisplay.textContent = `${score}%`;
   result.classList.remove('d-none');
 });
