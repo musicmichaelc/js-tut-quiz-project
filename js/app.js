@@ -21,6 +21,16 @@ form.addEventListener('submit', e => {
   const scoreDisplay = result.querySelector('span');
 
   scrollTo(0, 0);
-  scoreDisplay.textContent = `${score}%`;
   result.classList.remove('d-none');
+
+  // Animate score:
+  let output = 0;
+  const timer = setInterval(() => {
+    scoreDisplay.textContent = `${output}%`;
+    if(output === score){
+      clearInterval(timer);
+    } else {
+      output++
+    }
+  }, 10);
 });
