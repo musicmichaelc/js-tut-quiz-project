@@ -16,5 +16,10 @@ form.addEventListener('submit', e => {
     }
   });
 
-  console.log(`Your score is ${score}%!`);
+  // Display result:
+  const result = document.querySelector('div.result');
+  const scoreDisplay = document.querySelector('span');
+
+  scoreDisplay.textContent = `${score}%`;
+  result.classList.remove('d-none');
 });
