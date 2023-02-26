@@ -1,0 +1,7 @@
+{
+  "title": "Ninja Quiz",
+  "layout": "layout/quiz.njk",
+  "caption": "On with the questions&hellip;",
+  "scorePrefix": "You are",
+  "scoreSuffix": "ninja"
+}
