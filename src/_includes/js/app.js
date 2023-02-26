@@ -1,4 +1,4 @@
-// Read the correct Answer keys from the frontmatter yaml of quiz:
+// Read the correct Answer keys from the frontmatter yaml of quiz (auto-create array; separating with commas except for after last item):
 const correctAnswers = [
   {% for quizItem in quiz %}
     '{{ quizItem.correctAnswer }}'{{ ',' if loop.index !== quiz | length }}
@@ -13,7 +13,12 @@ form.addEventListener('submit', e => {
   e.preventDefault();
 
   let score = 0;
-  const userAnswers = [form.q1.value, form.q2.value, form.q3.value, form.q4.value];
+  const userAnswers = [
+    // Loop through answer values (classes q1, q2 etc. )Separate with a comma except for after the last item, thereby auto-creating an array
+    {% for quizItem in quiz %}
+      form.q{{ loop.index }}.value{{ ',' if loop.index !== quiz | length }}
+    {% endfor %}
+  ];
 
   // Check answers:
   userAnswers.forEach((answer, index) => {
