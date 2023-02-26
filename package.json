@@ -1,0 +1,24 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "Building a little interactive quiz app as a part of this excellent [javascript course](https://netninja.dev/p/modern-javascript-from-novice-to-ninja) by [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg) alias [iamshaunjp](https://github.com/iamshaunjp).",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/musicmichaelc/js-tut-quiz-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/musicmichaelc/js-tut-quiz-project/issues"
+  },
+  "homepage": "https://github.com/musicmichaelc/js-tut-quiz-project#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}
