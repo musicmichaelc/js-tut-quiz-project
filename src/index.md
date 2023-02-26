@@ -1,5 +1,5 @@
 ---
 title: 'Ninja Quiz'
-layout: quiz.njk
+layout: layout/quiz.njk
 ---
 
