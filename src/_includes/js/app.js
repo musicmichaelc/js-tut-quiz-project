@@ -1,5 +1,11 @@
-// I changed the order of some of the answers, so that they are not always the same:
-const correctAnswers = ['B', 'A', 'B', 'A'];
+// Read the correct Answer keys from the frontmatter yaml of quiz:
+const correctAnswers = [
+  {% for quizItem in quiz %}
+    '{{ quizItem.correctAnswer }}'{{ ',' if loop.index !== quiz | length }}
+  {% endfor %}
+];
+// Set score increment relative to how many questions/correct answers there are:
+const scoreIncrement = 100 / correctAnswers.length;
 const form = document.querySelector('.quiz-form');
 
 form.addEventListener('submit', e => {
@@ -12,7 +18,7 @@ form.addEventListener('submit', e => {
   // Check answers:
   userAnswers.forEach((answer, index) => {
     if(answer === correctAnswers[index]){
-      score += 25;
+      score += scoreIncrement;
     }
   });
 
