@@ -29,5 +29,14 @@ quiz:
     - 'slice()'
     - 'forEach()'
     correctAnswer: 'A'
+  -
+    question: "5. What is a ninja's favorite food"
+    answers:
+    - 'A ninja does not require food'
+    - 'Apples'
+    - 'Tomatoes'
+    - 'Eggs'
+    - 'Doughnuts'
+    correctAnswer: 'A'
 ---
 
